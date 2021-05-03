@@ -11,6 +11,11 @@ function pustoTu(string)
     }
 }
 
+function bialeZnaki(string)
+{
+    return /^[\n\s\r\t]*\$/.test(string);
+}
+
 function weryfikacja(formularz)
 {
     if (pustoTu(formularz.elements["imie"].value) == true)
