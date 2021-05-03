@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
 <head>
+    <link rel = "stylesheet" href = "style.css" type = "text/css" />
     <title>Formularz osobowy</title>
     <script src = "code.js"></script>
 </head>
 <body>
     <form name="user_data">
         <table>
-            <tr><td>Imię</td><td><input type="text" name="imie"></td></tr>
+            <tr><td>Imię</td><td><input type="text" name="imie"><span class="blad" id="blad_imie" /></td></tr>
             <tr>
                 <td>Wykształcenie </td>
                 <td>
@@ -15,11 +16,11 @@
                     <input name="wyksztalcenie" value="wyksztalcenie_s" type="radio" />średnie </br>
                     <input name="wyksztalcenie" value="wyksztalcenie_w" type="radio" />wyższe
             </td> </tr>
-            <tr><td>E-mail</td><td><input type="text" name="email"></td></tr>
-            <tr><td>Kod pocztowy</td><td><input type="text" name="kod"></td></tr>
-            <tr><td>Wiadomość</td><td><textarea rows="6" cols="17" name="wiadomosc"></textarea>
+            <tr><td>E-mail</td><td><input type="text" name="email"><span class="blad" id="blad_email" /></td></tr>
+            <tr><td>Kod pocztowy</td><td><input type="text" name="kod"><span class="blad" id="blad_kod" /></td></tr>
+            <tr><td>Wiadomość</td><td><textarea rows="6" cols="17" name="wiadomosc"></textarea><span class="blad" id="blad_wiadomosc" />
             </td></tr>
-            <tr><td colspan="2"><input type="submit" value="Wyślij" onclick = "return weryfikacja(this.form);"></td></tr>
+            <tr><td colspan="2"><input type="submit" value="Wyślij" onclick = "return weryfikacja(this.form)"></td></tr>
         </table>
     </form>
 </body>
