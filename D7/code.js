@@ -10,3 +10,16 @@ function pustoTu(string)
         return false;
     }
 }
+
+function weryfikacja(formularz)
+{
+    if (pustoTu(formularz) == true)
+    {
+        alert("Podaj swoje imię!");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
