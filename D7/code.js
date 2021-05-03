@@ -14,11 +14,10 @@ function bialeZnaki(string)
 {
     return /^[\n\s\r\t]*\$/.test(string);
 }
-function walidujNapis(napis, komunikat)
+function walidujNapis(napis)
 {
-    if (pustoTu(napis))
+    if (bialeZnaki(napis) || pustoTu(napis))
     {
-        alert(komunikat);
         return false;
     }
     else
@@ -35,31 +34,31 @@ function poprawnyAdres(adres)
     }
     else
     {
-        alert("Podaj swój adres email poprawnie!");
         return false;
     }
 }
-function walidacjaFocus(obiekt, wiadomosc)
+function walidacjaAllFocus(obiekt, wiadomosc, wali_funkcja)
 {
     let str = obiekt.value;
-    let errorField = "blad_" + obiekt.name.substr(2, obiekt.name.length);
-    if (pustoTu(str))
+    let errorField = "blad_" + obiekt.name.substr(0, obiekt.name.length);
+    if (wali_funkcja(str))
+    {
+        document.getElementById(errorField).innerHTML = "";
+        return true;
+    }
+    else
     {
         document.getElementById(errorField).innerHTML = wiadomosc;
         obiekt.focus();
         return false;
     }
-    else
-    {
-        return true;
-    }
 }
 function weryfikacja(formularz)
 {
-    var a = walidujNapis(formularz.elements["imie"], "Podaj swoje imię!")
-    var b = poprawnyAdres(formularz.elements["email"].value);
-    var c = walidujNapis(formularz.elements["kod"].value, "Podaj swój kod pocztowy!");
-    var d = walidujNapis(formularz.elements["wiadomosc"].value, "Wpisz swoją wiadomość!");
+    var a = walidacjaAllFocus(formularz.elements["imie"], "Podaj swoje imię!", walidujNapis)
+    var b = walidacjaAllFocus(formularz.elements["email"], "Podaj swój adres email poprawnie!", poprawnyAdres);
+    var c = walidacjaAllFocus(formularz.elements["kod"], "Podaj swój kod pocztowy!", walidujNapis);
+    var d = walidacjaAllFocus(formularz.elements["wiadomosc"], "Wpisz swoją wiadomość!", walidujNapis);
     if (a == false || b == false || c == false || d == false)
     {
         return false;
@@ -68,4 +67,28 @@ function weryfikacja(formularz)
     {
         return true;
     }
+}
+function pokazElement(e)
+{
+    document.getElementById(e).style.visibility = 'visible';
+}
+function ukryjElement(e)
+{
+    document.getElementById(e).style.visibility = 'hidden';
+}
+function licznikWierszy(i, e)
+{
+    if (e)
+    {
+        if (i % 2 == 1)
+        {
+            e.setAttribute("style", "background-color: Red;");
+        }
+        e = e.nextSibiling;
+        while (e && e.nodeType != 1)
+        {
+                e = e.nextSibiling;
+        }
+    licznikWierszy(++i, e);    
+    }    
 }
