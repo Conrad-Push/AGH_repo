@@ -13,7 +13,7 @@ function pustoTu(string)
 
 function weryfikacja(formularz)
 {
-    if (pustoTu(formularz) == true)
+    if (pustoTu(formularz.elements["imie"].value) == true)
     {
         alert("Podaj swoje imię!");
         return false;
