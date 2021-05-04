@@ -92,3 +92,7 @@ function licznikWierszy(i, e)
     licznikWierszy(++i, e);    
     }    
 }
+function myFunction() {
+    var list = document.getElementsByTagName("tr")[0];
+    document.getElementById("ile").innerHTML = list;
+  }
