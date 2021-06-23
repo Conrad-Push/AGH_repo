@@ -34,7 +34,7 @@ const topLink = document.querySelector(".top-link");
 window.addEventListener("scroll", function () {
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
-  if (scrollHeight > navHeight) {
+  if (scrollHeight > 0.68*navHeight) {
     navbar.classList.add("fixed-nav");
   } else {
     navbar.classList.remove("fixed-nav");
@@ -42,8 +42,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
@@ -70,7 +68,10 @@ scrollLinks.forEach((link) => {
       position = position - navHeight;
     }
     if (navHeight > 82) {
-      position = position + containerHeight;
+      position = position;
+    }
+    if (navHeight > 250) {
+      position = position + containerHeight; 
     }
 
     window.scrollTo({

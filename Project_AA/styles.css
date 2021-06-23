@@ -22,8 +22,8 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background: hsl(210, 36%, 96%);
-  color: hsl(209, 61%, 16%);
+  background: linear-gradient(rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.918));
+  color: hsl(0, 0%, 95%);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -110,19 +110,19 @@ p {
   background: #222;
 }
 .btn-white {
-  color: #fff;
-  border-color: #fff;
+  color: rgb(250, 250, 250);
+  border-color: rgb(212, 179, 87);
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
 .btn:hover {
-  background: #fff;
-  color: hsla(182, 63%, 54%);
+  background: rgba(27, 25, 25, 0.822);
+  color: rgb(212, 179, 87);
 }
 /* section */
 .section {
   padding-bottom: 5rem;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .section-center {
@@ -147,7 +147,7 @@ Scroll
 */
 /* navbar */
 nav {
-  background: #fff;
+  background: transparent;
   padding: 1rem 1.5rem;
 }
 /* fixed nav */
@@ -156,14 +156,14 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.705), rgb(0, 0, 0));
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .fixed-nav .links a {
-  color: hsl(209, 61%, 16%);
+  color: rgb(212, 179, 87);
 }
 .fixed-nav .links a:hover {
-  color: hsla(182, 63%, 54%);
+  color: rgb(248, 248, 248);
 }
 /* .fixed-nav .links-container {
   height: auto !important;
@@ -175,14 +175,14 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: hsl(209, 61%, 16%);
+  color: rgb(212, 179, 87);
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: hsla(182, 63%, 54%);
+  color: rgb(248, 248, 248);
 }
 .logo {
   height: 80px;
@@ -196,7 +196,7 @@ nav {
   height: 200px;
 }
 .links a {
-  background: #fff;
+  background: rgb(44 45 42 / 18%);
   color: rgb(212, 179, 87);
   font-size: 1.1rem;
   text-transform: capitalize;
@@ -204,10 +204,10 @@ nav {
   display: block;
   transition: all 0.3s linear;
   font-weight: bold;
-  padding: 0.75rem 0;
+  padding: 0.75rem;
 }
 .links a:hover {
-  color: hsl(209, 61%, 16%);
+  color: hsl(210, 23%, 90%);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -282,22 +282,19 @@ header {
   text-transform: uppercase;
 }
 .title span {
-  color: hsla(182, 63%, 54%);
+  color: rgb(212, 179, 87);
 }
 #about,
 #products,
 #contact {
   height: 80vh;
 }
-#products {
-  background: #fff;
-}
 footer {
-  background: hsl(209, 61%, 16%);
+  background: hsla(0, 0%, 0%, 0.308);
   padding: 5rem 1rem;
 }
 footer p {
-  color: #fff;
+  color: rgb(212, 179, 87);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.25rem;
@@ -309,14 +306,14 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: hsla(182, 63%, 54%);
+  background: rgb(212, 179, 87);
   width: 2rem;
   height: 2rem;
   display: grid;
   place-items: center;
   border-radius: 0.5rem;
-  color: #fff;
-  animation: bounce 2s ease-in-out infinite;
+  color: rgb(182, 119, 3);
+  animation: bounce 5s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
 }
@@ -330,7 +327,7 @@ footer p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
   100% {
     transform: scale(1);
