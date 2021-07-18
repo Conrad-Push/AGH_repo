@@ -49,7 +49,7 @@ nav {
 
 .background-img {
   background: linear-gradient(rgba(77, 80, 80, 0.781), rgba(0, 0, 0, 0.7)),
-    url(Strona_img/background.jpg) center/cover no-repeat;
+    url(Strona_img/12.jpg) center/cover no-repeat;
 }
 
 .banner {
@@ -61,7 +61,7 @@ nav {
 
 .container p {
   color: aliceblue;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   max-width: 55rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
@@ -72,11 +72,17 @@ li {
   list-style: none;
 }
 
-.container h1,
-h2,
+.container h1 {
+  text-shadow: 3px 3px #020202;
+  color: rgb(204, 78, 29);
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.container h2,
 h3,
 h4 {
-  color: aliceblue;
+  color: rgb(48, 86, 119);
 }
 
 .logo {
