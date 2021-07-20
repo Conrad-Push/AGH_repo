@@ -2,11 +2,11 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
 }
 
 body {
   color: aliceblue;
-  letter-spacing: 0.25rem;
   line-height: 1.25;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
@@ -34,8 +34,7 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  margin-bottom: 1.25rem;
-  color: hsl(210, 22%, 49%);
+  color: rgb(226, 226, 226);
 }
 
 nav {
@@ -50,6 +49,15 @@ nav {
 .background-img {
   background: linear-gradient(rgba(77, 80, 80, 0.781), rgba(0, 0, 0, 0.7)),
     url(Strona_img/12.jpg) center/cover no-repeat;
+}
+
+.background-img-c {
+  background: linear-gradient(rgba(77, 80, 80, 0.781), rgba(0, 0, 0, 0.7)),
+    url(Strona_img/12.jpg) center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner {
@@ -118,6 +126,127 @@ h4 {
   background-color: rgb(226, 226, 226);
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  min-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.card {
+  background: #2f3542;
+  padding: 0px 20px;
+  margin: 0px 20px;
+  width: calc(33%-20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-p {
+  background: #2f3542;
+  padding: 0px 20px;
+  margin: 0px 20px;
+  width: calc(33%-20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.card-icon {
+  font-size: 28px;
+  background: rgb(204, 78, 29);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+  background: none;
+  color: rgb(204, 78, 29);
+  transform: scale(1.6);
+}
+
+.card-p:hover .card-icon {
+  background: none;
+  color: rgb(204, 78, 29);
+  transform: scale(1.6);
+}
+
+@media (min-width: 1281px) {
+  .card p {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    min-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .card-p p {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    min-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .card:hover p {
+    max-height: 40px;
+    opacity: 1;
+  }
+
+  .card-p:hover p {
+    max-height: 40px;
+    opacity: 1;
+  }
+}
+
+.card p {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  min-height: 0;
+}
+
+.card-p p {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  min-height: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0px;
+  }
+
+  .card-p {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0px;
+  }
 }
 
 @media screen and (max-width: 1120px) {
