@@ -166,7 +166,7 @@ h4 {
 
 .card-icon {
   font-size: 28px;
-  background: rgb(204, 78, 29);
+  background: rgb(177, 74, 33);
   width: 60px;
   height: 60px;
   text-align: center;
@@ -177,13 +177,13 @@ h4 {
 
 .card:hover .card-icon {
   background: none;
-  color: rgb(204, 78, 29);
+  color: rgb(177, 74, 33);
   transform: scale(1.6);
 }
 
 .card-p:hover .card-icon {
   background: none;
-  color: rgb(204, 78, 29);
+  color: rgb(177, 74, 33);
   transform: scale(1.6);
 }
 
