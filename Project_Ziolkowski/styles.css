@@ -149,6 +149,7 @@ h4 {
   align-items: center;
   color: #fff;
   cursor: pointer;
+  border-radius: 5%;
 }
 
 .card-p {
@@ -162,6 +163,7 @@ h4 {
   justify-content: center;
   align-items: center;
   color: #fff;
+  border-radius: 5%;
 }
 
 .card-icon {
@@ -192,11 +194,12 @@ h4 {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   min-height: 100vh;
   grid-gap: 2rem;
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .img-container {
   overflow: hidden;
+  border-radius: 5%;
 }
 
 .img-container img {
@@ -240,6 +243,23 @@ h4 {
 
 .full-img.open {
   transform: translate(-50%, -50%) scale(1);
+}
+
+.section {
+  padding-bottom: 5rem;
+  padding: 1rem;
+  background: rgb(177, 74, 33);
+}
+
+footer {
+  padding: 5rem 1rem;
+}
+footer p {
+  color: rgb(226, 226, 226);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 1281px) {
