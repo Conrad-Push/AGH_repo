@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "montserrat", sans-serif;
 }
 
 body {
@@ -113,6 +112,11 @@ h4 {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  transition: 0.3s linear;
+}
+
+.nav-links a:hover {
+  color: #020202;
 }
 
 .burger {
@@ -137,7 +141,22 @@ h4 {
   padding: 0px 20px;
 }
 
-.card {
+.card-m {
+  background: #2f3542;
+  padding: 0px 20px;
+  margin: 0px 20px;
+  width: calc(33%-20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.card-mp {
   background: #2f3542;
   padding: 0px 20px;
   margin: 0px 20px;
@@ -177,7 +196,13 @@ h4 {
   transition: 0.3s linear;
 }
 
-.card:hover .card-icon {
+.card-m:hover .card-icon {
+  background: none;
+  color: rgb(177, 74, 33);
+  transform: scale(1.6);
+}
+
+.card-mp:hover .card-icon {
   background: none;
   color: rgb(177, 74, 33);
   transform: scale(1.6);
@@ -263,7 +288,16 @@ footer p {
 }
 
 @media (min-width: 1281px) {
-  .card p {
+  .card-m p {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    min-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .card-mp p {
     margin-top: 20px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -281,7 +315,12 @@ footer p {
     transition: 0.3s linear;
   }
 
-  .card:hover p {
+  .card-m:hover p {
+    max-height: 40px;
+    opacity: 1;
+  }
+
+  .card-mp:hover p {
     max-height: 40px;
     opacity: 1;
   }
@@ -292,7 +331,14 @@ footer p {
   }
 }
 
-.card p {
+.card-m p {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  min-height: 0;
+}
+
+.card-mp p {
   margin-top: 20px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -311,7 +357,13 @@ footer p {
     flex-direction: column;
   }
 
-  .card {
+  .card-m {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0px;
+  }
+
+  .card-mp {
     width: 100%;
     max-width: 300px;
     margin: 10px 0px;
@@ -365,6 +417,14 @@ footer p {
 
   .burger {
     display: block;
+  }
+
+  .gallery-block {
+    pointer-events: none;
+  }
+
+  .cards-block {
+    pointer-events: none;
   }
 }
 
