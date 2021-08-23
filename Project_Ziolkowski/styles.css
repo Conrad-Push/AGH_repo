@@ -274,6 +274,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
   transition: all 0.25s ease-out;
+  border-radius: 5%;
 }
 
 .full-img.open {
