@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My_First_Application</string>
+    <string name="hint_text">Wpisz wiadomość</string>
+    <string name="button_text">Wyślij</string>
+</resources>
